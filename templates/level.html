@@ -40,28 +40,34 @@
 <div class="container text-center">
   <h1 class="my-5 text-white">Choose Your Level</h1>
   <div class="d-flex mt-5 align-items-center justify-content-center">
+    {% if list_level %}
     <div class="level_items mx-3">
-      <a href="debutant/"  class="text-decoration-none">
+      <a href="{{list_level.0}}/"  class="text-decoration-none">
         <button class="btn1 btn btn-lg text-white p-3 fs-3 fw-bold bg-primary border-0">
-          Debutant
+          <!-- Debutant -->
+          {{list_level.0}}
         </button>
       </a>
     </div>
+
     <div class="level_items mx-3">
-      <a href="intermediarie/" class="text-decoration-none">
+      <a href="{{ list_level.1 }}/" class="text-decoration-none">
         <button class="btn2 btn btn-lg p-3 text-white fs-3 fw-bold bg-success border-0">
-          Intermediarie
+          <!-- Intermediarie -->
+          {{list_level.1 }}
         </button>
       </a>
     </div>
     
     <div class="level_items mx-3">
-      <a href="advance/"  class=" text-decoration-none">
+      <a href="{{ list_level.2 }}/"  class=" text-decoration-none">
         <button class="btn3 btn btn-lg p-3 fs-3 fw-bold  bg-warning  border-0 text-white">
-          Advance
+          <!-- Advance -->
+          {{list_level.2 }}
         </button>  
       </a>
     </div>
+    {% endif %}
   </div>
   <div class="home">
     <a href="{% url 'index' %}">
