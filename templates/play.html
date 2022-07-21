@@ -1,0 +1,88 @@
+{% extends 'main.html' %}
+<style>
+  .letter{
+    width: 10vw !important;
+    height: 40px;
+  }
+</style>
+{% block pagetitle%}Game Play Page{%endblock%}
+
+{%block headerTitle%} 
+  <div class="container text-center text-warning">
+    <h1 class="my-4 fw-bold">JEU DE PENDU</h1>
+  </div>
+{% endblock %}
+
+{%block headerContent%} 
+<div class="container my-3 p-2 bounce-in-top sticky-top">
+  <nav class="navbar navbar-expand-lg bg-success rounded shadow-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active text-white" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="{% url 'level' %}">Level</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="{% url 'openTheam' 1%}">Theam</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#">Game Play</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+{% endblock %}
+
+{%block bodyContent%}
+<div class="container text-white">
+  <h3 class="fw-bold text-dark my-3">Let's Play HangMan Game</h3>
+  <div class="mainContent">
+    <div class="row text-center mx-auto">
+      <div class="col-lg-4 bg-dark bg-opacity-25">
+
+      </div>
+      <div class="col-lg-8 bg-white bg-opacity-25 d-flex justify-content-center align-items-center flex-column">
+        <div class="col-lg-10 bg-danger my-3">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis in, voluptates recusandae repellat saepe temporibus atque animi nihil voluptatum sunt dolorem perferendis doloremque dolore deleniti voluptatibus sequi fuga asperiores quis?
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit libero nam voluptatum quisquam assumenda. Illo cumque, inventore distinctio architecto, expedita ullam hic nihil soluta rerum modi vel exercitationem voluptatem odio?
+          </p>
+        </div>
+        <div class="col-lg-10 d-flex flex-column mt-4">
+          <div class="col-12 d-flex flex-row flex-wrap justify-content-center">
+            {% for word in letter %}
+            <div class="letter mx-2 p-0 my-3 d-flex flex-wrap">
+              <button class="fs-3 semi-bold bg-dark text-white border-0  p-2 rounded-circle w-100 h-100 text-center">{{ word }}</button>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col my-5">
+          <a href="#" class="text-decoration-none mx-3">
+            <button class="btn btn-lg bg-outline-white text-white bg-primary">Play Again</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="contentButton text-center">
+    <a href="{% url 'openTheam' 1%}" class="text-decoration-none mx-3">
+      <button class="btn btn-lg bg-outline-white text-white bg-info">Theam Page</button>
+    </a>
+    <a href="{% url 'index'%}" class="text-decoration-none mx-3">
+      <button class="btn btn-lg bg-outline-white text-white bg-dark">Go Home</button>
+    </a>
+  </div>
+</div>
+{% endblock %}

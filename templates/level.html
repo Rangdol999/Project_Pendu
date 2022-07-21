@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+
+{% block pageTitle%} Level Page{%endblock%}
+
+{%block headerTitle%} 
+  <div class="container text-center">
+    <h1 class="my-4 fw-bold">JEU DE PENDU</h1>
+  </div>
+{% endblock %}
+
+{%block headerContent%} 
+<div class="container my-3 p-2 bounce-in-top sticky-top">
+  <nav class="navbar navbar-expand-lg bg-success rounded shadow-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active text-white" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white active" href="#">Level</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#">Theam</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#">Game Play</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+{% endblock %}
+
+{%block bodyContent%}
+<div class="container text-center">
+  <h1 class="my-5">Choose Your Level</h1>
+  <div class="d-flex mt-5 align-items-center justify-content-center">
+    <div class="level_items mx-3">
+      <a href="debutant/"  class="text-decoration-none">
+        <button class="btn1 btn btn-lg text-white p-3 fs-3 fw-bold bg-primary border-0">
+          Debutant
+        </button>
+      </a>
+    </div>
+    <div class="level_items mx-3">
+      <a href="intermediarie/" class="text-decoration-none">
+        <button class="btn2 btn btn-lg p-3 text-white fs-3 fw-bold bg-success border-0">
+          Intermediarie
+        </button>
+      </a>
+    </div>
+    
+    <div class="level_items mx-3">
+      <a href="advance/"  class=" text-decoration-none">
+        <button class="btn3 btn btn-lg p-3 fs-3 fw-bold  bg-warning  border-0 text-white">
+          Advance
+        </button>  
+      </a>
+    </div>
+  </div>
+  <div class="home">
+    <a href="{% url 'index' %}">
+      <button class="btn btn-lg  bg-outline-secondary bg-dark my-5 text-white">
+        Go Home
+      </button>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

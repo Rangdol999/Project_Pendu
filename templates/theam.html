@@ -1,0 +1,81 @@
+{% extends 'main.html' %}
+
+{% block pageTitle%}Theam Page{%endblock%}
+
+{%block headerTitle%} 
+  <div class="container text-center text-white">
+    <h1 class="my-4 fw-bold">JEU DE PENDU</h1>
+  </div>
+{% endblock %}
+
+{%block headerContent%} 
+<div class="container my-3 p-2 bounce-in-top sticky-top">
+  <nav class="navbar navbar-expand-lg bg-success rounded shadow-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active text-white" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="{% url 'level' %}">Level</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#">Theam</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#">Game Play</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+{% endblock %}
+
+{%block bodyContent%}
+<div class="container">
+  <h3 class="text-center fw-bold text-white">Choose One theam</h3>
+  <div class="row">
+    <div class="col-md-5 col-lg-5 mx-auto text-center my-3">
+      <a href="voiture/" class="text-decoration-none">
+        <h4 class="title text-white fw-bold">Voiture</h4>
+        <div class="image">
+          <img src="/static/image/skeleton-5749900_1920.webp" class="img-fluid rounded" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-5 col-lg-5 mx-auto text-center my-3">
+      <a href="sport/" class="text-decoration-none">
+        <h4 class="title text-white fw-bold">Sport</h4>
+        <div class="image">
+          <img src="/static/image/images.jpeg" style="width: 100%; height: 100%; object-fit: cover;" class="img-fluid rounded border-3 border-white" alt="">
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6 mx-auto text-center my-3">
+      <a href="country/" class="text-decoration-none">
+        <h4 class="title text-white fw-bold">Country</h4>
+        <div class="image">
+          <img src="/static/image/hangman.jpeg" class="img-fluid rounded" alt="" >
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="contentButton text-center my-4">
+    <a href="{% url 'level' %}" class="text-decoration-none mx-3">
+      <button class="btn btn-lg bg-outline-white text-white bg-info">Level Page</button>
+    </a>
+    <a href="{% url 'index'%}" class="text-decoration-none mx-3">
+      <button class="btn btn-lg bg-outline-white text-white bg-dark">Go Home</button>
+    </a>
+  </div>
+</div>
+{% endblock %}

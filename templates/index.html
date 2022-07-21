@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block pageTitle%}Home Page{%endblock%}
+
+{%block headerTitle%} 
+<div class="container text-center text-white">
+  <h1 class="my-4">JEU DE PENDU</h1>
+</div>
+{% endblock %}
+
+{%block bodyContent%}
+  <div class="container">
+    <div class="content">
+      <div class="contentTop">
+        <h1>Bienvenue au Jeu du Pendu</h1>
+      </div>
+      <div class="contentButton">
+        <a href="{% url 'level' %}">
+          <button class="btn btn-lg bg-black text-white bg-outline-white">Commencer</button>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

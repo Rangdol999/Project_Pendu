@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background:url('https://images.unsplash.com/photo-1478827387698-1527781a4887?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80')no-repeat center center/cover;
+}
+.content {
+  width: 1000px;
+  height: 550px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  background: url("/static/image/skeleton-5749900_1920.webp")no-repeat center center/cover;
+  border-radius: 5px;
+}
+.content h1 {
+  font-family: 'Fascinate Inline', cursive;
+  padding: 20px;
+  font-size: 50px;
+  color:crimson;
+}
+
+
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* play game page */
+.letter{
+  width: 50px !important;
+}

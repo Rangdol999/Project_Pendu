@@ -1,0 +1,26 @@
+.level_items a{
+  height: 150px;
+  width: 300px;
+}
+.level_items .btn1 {
+  background-color: green;
+  transform: scale(1);
+  border: 1px solid black;
+}
+.level_items .btn2 {
+  background-color: orange;
+  border: 1px solid black;
+  transform: scale(1);
+}
+
+.level_items .btn3 {
+  background-color: red;
+  transform: scale(1);
+  border: 1px solid black;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+  transform: scale(1.2);
+}

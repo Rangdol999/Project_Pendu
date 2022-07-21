@@ -1,0 +1,3 @@
+clickButton = document.querySelector("btn")
+
+
