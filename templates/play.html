@@ -5,7 +5,7 @@
     height: 40px;
   }
 </style>
-{% block pagetitle%}Game Play Page{%endblock%}
+{% block pageTitle%} Game Play Page {%endblock%}
 
 {%block headerTitle%} 
   <div class="container text-center text-warning">
@@ -77,10 +77,10 @@
 </div>
 <div class="container my-5">
   <div class="contentButton text-center">
-    <a href="{% url 'openTheam' 1%}" class="text-decoration-none mx-3">
+    <a href="/level/{{id}}" class="text-decoration-none mx-3">
       <button class="btn btn-lg bg-outline-white text-white bg-info">Theam Page</button>
     </a>
-    <a href="{% url 'index'%}" class="text-decoration-none mx-3">
+    <a href="{% url 'index' %}" class="text-decoration-none mx-3">
       <button class="btn btn-lg bg-outline-white text-white bg-dark">Go Home</button>
     </a>
   </div>
