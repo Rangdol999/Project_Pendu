@@ -19,9 +19,9 @@ class FilePath():
 
 
 list_pendu = {
-    'sport': {'Football', 'basketball', 'swimming', 'tennise', 'cricket', 'baseball','bedmention'},   
-    'voiture': {"Cadillac","Chevrolet","Chrysler","Ford","Ford Mustang","Shelby", "lamborghini"},
-    'country' : {'france', 'germany', 'spain', 'china', 'india', 'japan', 'korea'}
+    'sport': {'FOOTBALL', 'BASKETBALL', 'SWIMMING', 'TENNISE', 'CRICKET', 'BASEBALL','BEDMENTION'},   
+    'voiture': {"CADILLAC","CHEVROLET","CHRYSLER","FORD","MUSTANG","SHELBY", "LAMBORGHINI"},
+    'country' : {'FRANCE', 'GERMANY', 'SPAIN', 'CHINA', 'INDIA', 'JAPAN', 'KOREA'}
     }
 
 # HOME Page
@@ -47,19 +47,38 @@ def playGame(request, id, pendu_id):
   for c in ascii_uppercase:
     letter.append(c)
 
+  wordInput = input(letter)
+  print("wordInput :", wordInput)
+  
 
+  mot = []
+  for one in letter:
+    # print("letter One :", one)
+    mot.append(one)
+
+  # wrongLetter = 6
+  
   key, value = random.choice(list(list_pendu.items()))
+
   if key == pendu_id:
     print("key :", key)
     print("value :", value)
     
     a = list(value)
     b = random.choice(a)
+
     word_letter = []
     for word in range(len(b)):
       word_letter.append("__")
-    print("word_letter :", word_letter)
+    print("word_letter :", list(word_letter))
 
+    temp = []
+    for single in b:
+      print("single :", single)
+      # if single == letter:
+      #   print("Hello world")
+      temp.append(single)
+    print("temp :", temp)
     # temp= []
     # for i in list(value):
     #   print("value :", i)
