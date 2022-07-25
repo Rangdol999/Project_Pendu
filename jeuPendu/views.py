@@ -47,14 +47,9 @@ def playGame(request, id, pendu_id):
   for c in ascii_uppercase:
     letter.append(c)
 
-  wordInput = input(letter)
-  print("wordInput :", wordInput)
+  # wordInput = input(letter)
+  # print("wordInput :", awordInput)
   
-
-  mot = []
-  for one in letter:
-    # print("letter One :", one)
-    mot.append(one)
 
   # wrongLetter = 6
   
@@ -74,7 +69,7 @@ def playGame(request, id, pendu_id):
 
     temp = []
     for single in b:
-      print("single :", single)
+      # print("single :", single)
       # if single == letter:
       #   print("Hello world")
       temp.append(single)
@@ -84,7 +79,20 @@ def playGame(request, id, pendu_id):
     #   print("value :", i)
     #   temp.append(i)
     # print("temp :", temp)
+
+    mot = []
+    for one in letter:
+      # print("letter One :", one)
+      # print("letter :", letter)
+      if one in temp:
+        print("Bonjour tout le monde :", one)
+      mot.append(one)
+
   else:
     print("hello world")
     
   return render(request, 'play.html', {'id': id, 'letter': letter} )
+
+
+def myClick():
+  print("Namaste")
