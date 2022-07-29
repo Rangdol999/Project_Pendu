@@ -43,60 +43,55 @@ def openTheam(request, id):
 
 # GAME Page
 def playGame(request, id, pendu_id):
-  key, value = random.choice(list(list_pendu.items()))
-
   letter = []
   for c in ascii_uppercase:
     letter.append(c)
 
-  a = list(value)
-  b = random.choice(a)
+  # wordInput = input(letter)
+  # print("wordInput :", awordInput)
+  
 
-  word_letter = []
-  for word in range(len(b)):
-    word_letter.append("__")
-  print("word_letter :", str(word_letter))
+  # wrongLetter = 6
+  
+  key, value = random.choice(list(list_pendu.items()))
 
-  temp = []
-  for single in b:
-    temp.append(single)
-  print("temp :", temp)
+  if key == pendu_id:
+    print("key :", key)
+    print("value :", value)
+    
+    a = list(value)
+    b = random.choice(a)
 
+    word_letter = []
+    for word in range(len(b)):
+      word_letter.append("__")
+    print("word_letter :", list(word_letter))
 
-  mot = []
-  for one in letter:
-    if one in temp:
+    temp = []
+    for single in b:
+      # print("single :", single)
+      # if single == letter:
+      #   print("Hello world")
+      temp.append(single)
+    print("temp :", temp)
+    # temp= []
+    # for i in list(value):
+    #   print("value :", i)
+    #   temp.append(i)
+    # print("temp :", temp)
+
+    mot = []
+    for one in letter:
+      # print("letter One :", one)
+      # print("letter :", letter)
+      if one in temp:
+        print("Bonjour tout le monde :", one)
       mot.append(one)
-  print("mot :", mot)
 
-  # if key == pendu_id:
-    # print("key :", key)
-    # print("value :", value)
+  else:
+    print("hello world")
     
-  #   a = list(value)
-  #   b = random.choice(a)
-
-  #   word_letter = []
-  #   for word in range(len(b)):
-  #     word_letter.append("__")
-  #   print("word_letter :", word_letter)
-
-  #   temp = []
-  #   for single in b:
-  #     temp.append(single)
-  #   print("temp :", temp)
-
-
-  #   mot = []
-  #   for one in letter:
-  #     if one in temp:
-  #       mot.append(one)
-  #   print("mot :", mot)
-
-  # else:
-  #   print("hello world")
-    
-  return render(request, 'play.html', {'id': id, 'letter': letter, "word_letter": word_letter} )
+  return render(request, 'play.html', {'id': id, 'letter': letter} )
 
 
 def myClick():

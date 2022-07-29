@@ -50,20 +50,17 @@
 
       </div>
       <div class="col-lg-8 bg-white bg-opacity-25 d-flex justify-content-center align-items-center flex-column">
-        <div class="col-lg-10 bg-danger my-3">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis in, voluptates recusandae repellat saepe temporibus atque animi nihil voluptatum sunt dolorem perferendis doloremque dolore deleniti voluptatibus sequi fuga asperiores quis?
-            <br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit libero nam voluptatum quisquam assumenda. Illo cumque, inventore distinctio architecto, expedita ullam hic nihil soluta rerum modi vel exercitationem voluptatem odio?
-          </p>
+        <div class="col-lg-10 my-4 text-center">
+          <ul class="d-flex list-unstyled text-center mx-auto align-items-center">
+            {%for item in word_letter %}
+            <li class="text-decoration-none mx-2 fs-3 text-danger">{{ item }}</li>
+            {%endfor%}
+          </ul>
         </div>
-        <div class="col-lg-10 d-flex flex-column mt-4">
+        <div class="col-lg-10 d-flex flex-column">
           <div class="col-12 d-flex flex-row flex-wrap justify-content-center">
             {% for word in letter %}
             <div class="letter mx-2 p-0 my-3 d-flex flex-wrap">
-              <!-- <a href="" class="d-flex flex-wrap text-decoration-none p-0 letter">
-                <button class="fs-3 semi-bold bg-dark text-white border-0  p-2 rounded-circle w-100 h-100 text-center" onclick="myClick()">{{ word }}</button>
-              </a> -->
               <button class="fs-3 semi-bold bg-dark text-white border-0  p-2 rounded-circle w-100 h-100 text-center">{{ word }}</button>
             </div>
             {% endfor %}
